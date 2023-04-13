@@ -16,11 +16,6 @@ public class Main : MonoBehaviour
         items.Insert(20);
         items.Insert(30);
         items.Insert(10);
-        int[] commons = items.Intersect();
-        for (int i = 0; i < commons.Length; i++)
-        {
-            Debug.Log(commons[i]);
-        }
     }
 
     #endregion
