@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DSA.Scripts.ExtendedArray;
-using Array = DSA.Scripts.ExtendedArray.Array;
+using DSA.Scripts.Array;
 
 public class Main : MonoBehaviour
 {
@@ -11,7 +7,7 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        Array items = new Array(3);
+        DynamicArray items = new DynamicArray(3);
         items.Insert(10);
         items.Insert(20);
         items.Insert(30);

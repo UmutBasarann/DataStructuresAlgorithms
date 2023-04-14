@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace DSA.Scripts.ExtendedArray
+namespace DSA.Scripts.Array
 {
-    public class Array
+    public class DynamicArray
     {
         #region Fields
 
@@ -14,7 +14,7 @@ namespace DSA.Scripts.ExtendedArray
 
         #region Constructor
 
-        public Array(int length)
+        public DynamicArray(int length)
         {
             _items = new int[length];
         }
