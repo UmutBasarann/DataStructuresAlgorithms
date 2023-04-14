@@ -1,5 +1,5 @@
 using UnityEngine;
-using DSA.Scripts.Array;
+using DSA.Scripts.LinkedListExample;
 
 public class Main : MonoBehaviour
 {
@@ -7,11 +7,12 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        DynamicArray items = new DynamicArray(3);
-        items.Insert(10);
-        items.Insert(20);
-        items.Insert(30);
-        items.Insert(10);
+        LinkedList linkedList = new LinkedList();
+        linkedList.AddLast(10);
+        linkedList.AddLast(20);
+        linkedList.AddLast(30);
+        linkedList.AddLast(40);
+        linkedList.AddLast(50);
     }
 
     #endregion
