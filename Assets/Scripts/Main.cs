@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using DSA.Scripts.LinkedListExample;
 using DSA.Scripts.Stack;
+using UnityEngine;
 
 public class Main : MonoBehaviour
 {
@@ -10,10 +7,7 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        BalancedString balancedString = new BalancedString();
-        bool isBalanced = balancedString.IsBalanced("{as}[dfg](+)<>");
         
-        Debug.Log(isBalanced);
     }
 
     #endregion
