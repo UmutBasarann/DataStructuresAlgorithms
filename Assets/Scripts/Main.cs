@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DSA.Scripts.Dictionary;
+using DSA.Scripts.Hash;
 using DSA.Scripts.Queue;
 using UnityEngine;
 
@@ -9,14 +12,7 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        PriorityQueue queue = new PriorityQueue(5);
-        queue.Add(5);
-        queue.Add(3);
-        queue.Add(6);
-        queue.Add(1);
-        queue.Add(4);
         
-        Debug.Log(queue);
     }
 
     #endregion
