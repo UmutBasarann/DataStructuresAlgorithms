@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using DSA.Scripts.Queue;
 using UnityEngine;
 
 public class Main : MonoBehaviour
@@ -8,19 +9,14 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        Queue<int> queue = new Queue<int>();
-        queue.Enqueue(10);
-        queue.Enqueue(20);
-        queue.Enqueue(30);
+        PriorityQueue queue = new PriorityQueue(5);
+        queue.Add(5);
+        queue.Add(3);
+        queue.Add(6);
+        queue.Add(1);
+        queue.Add(4);
         
-        ReverseQueue(queue);
-
-        int[] queueArray = queue.ToArray();
-
-        foreach (int item in queueArray)
-        {
-            Debug.Log(item);
-        }
+        Debug.Log(queue);
     }
 
     #endregion
