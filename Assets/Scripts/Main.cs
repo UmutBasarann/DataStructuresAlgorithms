@@ -22,7 +22,12 @@ public class Main : MonoBehaviour
         tree.Add(6);
         tree.Add(10);
         
-        Debug.Log(tree.IsBinarySearchTree());
+        List<int> list = tree.GetNodesAtDistance(1);
+
+        foreach (int value in list)
+        {
+            Debug.Log(value);
+        }
     }
 
     #endregion

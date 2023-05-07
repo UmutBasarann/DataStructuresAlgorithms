@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DSA.Scripts.BinarySearchTree
@@ -280,6 +281,50 @@ namespace DSA.Scripts.BinarySearchTree
 
             return IsBinarySearchTree(root.LeftChild, min, root.Value - 1)
                    && IsBinarySearchTree(root.RightChild, root.Value + 1, max);
+        }
+
+        #endregion
+
+        #region PrintNodeAtDistance
+
+        public List<int> GetNodesAtDistance(int distance)
+        {
+            var list = new List<int>();
+            GetNodesAtDistance(_root, distance, list);
+
+            return list;
+        }
+
+        private void GetNodesAtDistance(Node root, int distance, List<int> list)
+        {
+            if (root is null)
+            {
+                return;
+            }
+            
+            if (distance == 0)
+            {
+                list.Add(root.Value);
+                return;
+            }
+            
+            GetNodesAtDistance(_root.LeftChild, distance - 1, list);
+            GetNodesAtDistance(_root.RightChild, distance - 1, list);
+        }
+
+        #endregion
+
+        #region TraverseLevelOrder
+
+        public void TraverseLevelOrder()
+        {
+            for (int i = 0; i < Height(); i++)
+            {
+                foreach (int value in GetNodesAtDistance(i))
+                {
+                    Debug.Log(value);
+                }
+            }
         }
 
         #endregion
